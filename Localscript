@@ -1,0 +1,13 @@
+-- skip button
+local skipButton = script.Parent
+local introGui = skipButton:FindFirstAncestor("IntroGui")
+
+skipButton.MouseButton1Click:Connect(function()
+	introGui:Destroy() 
+end)
+
+task.delay(5, function()
+	if introGui then
+		introGui:Destroy()
+	end
+end)
